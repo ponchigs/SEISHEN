@@ -1,0 +1,697 @@
+:root {
+    --bg-color: #f2f4f7;
+    --text-color: #4b5666;
+    --accent-color: #dfe9ff;
+    --coltrast-color: #1153ed;
+    --gray-color: #dbe1e8;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+a {
+    color: var(--text-color); 
+    text-decoration: underline;  
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    min-width: 320px;
+    font-family: "Roboto", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* =================== General rules ====================*/
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main.main {
+    flex: 1 1 auto;
+}
+
+.btn, .dropdown-menu, .form-control {
+    border-radius: 0;
+}
+
+.form-control:focus {
+    color: var(--text-color);
+    border-color: var(--accent-color);
+    box-shadow: none;
+}
+
+.form-control::placeholder {
+    color: var(--gray-color)
+}
+
+.btn-warning {
+    background-color: var(--accent-color);
+    color: var(--coltrast-color);
+}
+
+.btn-outline-warning {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.btn-outline-warning:hover {
+    background-color: var(--accent-color);
+    color: var(--coltrast-color);
+}
+
+.bg-warning {
+    background-color: var(--accent-color) !important;
+}
+
+.btn-outline-warning:hover {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+}
+
+/* =================== General rules ====================*/
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main.main {
+    flex: 1 1 auto;
+}
+
+section {
+    padding: 50px 0;
+}
+
+.section-title {
+    position: relative;
+    text-transform: uppercase;
+    color: var(--contrast-color);
+    font-weight: 700;
+}
+
+.section-title span {
+    background-color: var(--bg-color);
+    padding-right: 1rem;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    top: 50%;
+    left: 0;
+    border-top: 1px dashed var(--text-color);
+    z-index: -1;
+}
+
+/* =================== Header rules ====================*/
+
+.header-top-phone a {
+    text-decoration: none;
+}
+
+.header-top-phone a:hover {
+    text-decoration: underline;
+}
+
+ul.social-icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+ul.social-icons li {
+    margin-right: 10px;
+}
+
+ul.social-icons a {
+    background-color: var(--accent-color);
+    color: var(--coltrast-color);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    float: left;
+    text-align: center;
+}
+
+ul.social-icons a:hover {
+    background-color: var(--coltrast-color);
+    color: var(--accent-color);
+    transition: all .3s;
+}
+
+.header-top .btn {
+    background-color: #fff;
+
+}
+
+.button-search {
+    color: var(--coltrast-color);
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.header-logo {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--coltrast-color);
+    font-weight: 900;
+    transition: all .3s;
+}
+
+.header-logo:hover {
+    color: var(--accent-color);
+    font-weight: 900;
+}
+
+.cart-buttons .btn {
+    color: var(--contrast-color);
+    transition: all .3s;
+    border: none;
+}
+
+.cart-buttons .btn:hover {
+     color: var(--accent-color);
+     border: none;
+}
+
+.cart-buttons-phone .btn{
+    color: var(--accent-color);
+    transition: all .3s;
+    border: none;
+}
+
+.cart-buttons-phone .btn:hover {
+     color: var(--contrast-color);
+     border: none;
+}
+
+.tel-num {
+    font-size: 0.8rem;
+}
+
+.button-pay {
+    border: none;
+}
+
+.button-pay:hover {
+    background-color: var(--coltrast-color);
+    color: var(--accent-color);
+}
+
+.header-bottom {
+    border-top: 3px solid var(--accent-color);
+}
+
+.header-bottom .navbar,
+.header-bottom .navbar .dropdown-menu {
+    background-color: var(--coltrast-color) !important;
+}
+
+.header-bottom .nav-item:first-child .nav-link {
+    padding-left: 0;
+}
+
+.header-bottom .navbar .nav-link {
+    color: #fff;
+    transition: .3s all;
+    letter-spacing: .1rem;
+}
+
+.header-bottom .navbar .nav-link:hover {
+    color: var(--accent-color);
+}
+
+.header-bottom .navbar .nav-link.active {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.header-bottom .navbar .dropdown-menu {
+    margin-top: 7px;
+}
+
+.headernav-scroll.header-bottom .navbar .offcanvas:not(.show) .nav-link {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+
+/* =================== Header rules ====================*/
+
+/* =================== Page inner navigation ==================== */
+
+/* =================== ВНУТРЕННЯЯ НАВИГАЦИЯ (ЯКОРЯ) ==================== */
+
+/* Липкое меню с якорями */
+.page-nav {
+    position: sticky;      /* делаем блок липким */
+    top: 80px;             /* отступ от верха окна до начала якорного меню */
+    z-index: 900;          /* чтобы не пряталось за контентом */
+
+    background-color: #fff;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem 0;
+}
+
+.headernav-scroll + .main .page-nav {
+    top: 60px;  
+}
+
+.page-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-wrap: wrap;         
+    gap: 0.75rem 1.5rem;     
+    align-items: center;
+}
+
+.page-nav-item {
+    margin: 0;
+}
+
+.page-nav-link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    white-space: nowrap;  
+}
+
+.page-nav-link:hover {
+    text-decoration: underline;
+}
+
+.page-nav a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.page-nav a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+    .page-nav {
+        top: 70px; 
+    }
+
+    .headernav-scroll + .main .page-nav {
+        top: 55px;
+    }
+
+    .page-nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+
+    .page-nav-link {
+        font-size: 0.9rem;
+        white-space: normal;  
+    }
+}
+
+/* =================== Page inner navigation ==================== */
+
+/* ===================== 4. УПАКОВКА ======================= */
+
+.care-section {
+    background-color: #fafafa;
+}
+
+.care-section ul {
+    padding-left: 1.2rem;
+}
+
+.care-section img {
+    border-radius: 12px;
+    box-shadow: 0 10px 30px -15px rgba(0,0,0,0.25);
+    object-fit: cover;
+}
+
+/* ===================== 5. ОТЗЫВЫ ======================== */
+
+.reviews {
+    background-color: #ffffff;
+}
+
+.reviews .card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px -15px rgba(0,0,0,0.2);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.reviews .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px -10px rgba(0,0,0,0.28);
+}
+
+.reviews .card-body {
+    padding: 1.25rem 1.5rem;
+}
+
+.reviews p {
+    line-height: 1.4;
+}
+
+/* ===================== 6. CTA (ПРИЗЫВ) =================== */
+
+.cta-section {
+    background-color: #ffeec0;
+    border-top: 1px solid #ffd372;
+    border-bottom: 1px solid #ffd372;
+    text-align: center;
+}
+
+.cta-section .btn {
+    padding: 0.7rem 2rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: background-color .2s ease;
+}
+
+.cta-section .btn:hover {
+    background-color: #ffcb47;
+}
+
+/* Заголовки в этих секциях */
+.care-section .section-title span,
+.reviews .section-title span,
+.cta-section .section-title span {
+    background-color: #fff3d0;
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+
+/* =================== Main rules ====================*/
+
+/* =================== Carousel ====================== */
+
+.carousel-caption {
+    text-shadow: 0 0 2px rgba(0, 0, 0, 1);
+}
+
+.carousel-caption p {
+    font-size: 1.5rem;
+}
+
+/* =================== Carousel ====================== */
+
+/* ============================= Advantages ============================ */
+
+.advantages .item {
+    background-color: #fff;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all .3s;
+}
+
+.advantages .item:hover {
+    box-shadow: 0 15px 30px -20px rgba(0, 0, 0, .5);
+}
+
+.advantages i {
+    font-size: 70px;
+    color: var(--accent-color);
+}
+
+/* ============================= Advantages ============================ */
+
+/* ============================= Featured products ============================ */
+
+/* ============================= Product card ============================ */
+.emptyCard {
+    margin-bottom: 24px;
+    width: 50px;
+}
+.alert {
+    text-align: center;
+    white-space: pre-line;
+}
+
+/* ============================= Product card ============================ */
+
+/* ============================= Featured products ============================ */
+
+.product-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;       
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+	height: 35px;
+}
+
+.details-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    margin-top: auto;
+	margin-bottom: 25px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.items {
+	background: #f2ede7;
+	border-radius: 8px;
+	width: 120px;
+	display: flex;
+	font-size: 18px;
+	height: 30px;
+	overflow: hidden;
+}
+
+.items__control {
+	width: 40px;
+	cursor: pointer;
+	transition: 0.2s ease-in;
+	text-align: center;
+}
+
+.items__control:hover {
+    background: var(--coltrast-color);
+    color: #FFF;
+}
+
+.items__current {
+	width: 40px;
+}
+
+/* items--small */
+.items.items--small {
+	width: 90px;
+	font-size: 16px;
+	height: 26px;
+	text-align: center;
+}
+
+.items.items--small .items__control {
+	width: 30px;
+}
+
+.items.items--small .items__current {
+	width: 30px;
+}
+
+.price {
+	text-align: left;
+}
+
+.price__weight {
+	color: var(--text-color)!important;
+	font-size: 80%;
+	line-height: 1;
+}
+
+.price__currency {
+	font-size: 1.5rem;
+	font-weight: 600;
+	line-height: 1;
+}
+
+.btn-outline-warning {
+    color: var(--coltrast-color);
+    border-color: var(--coltrast-color);
+}
+
+.btn-outline-warning:hover {
+    color: #FFF;
+    background-color: var(--coltrast-color);
+    border-color: var(--coltrast-color);
+}
+
+.cart-item {
+    padding: 0 16px;
+}
+
+.cart-item__top {
+	display: flex;
+	align-items: flex-start;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #dee2e6;
+	margin-bottom: 15px;
+}
+
+.cart-item__img  {
+
+}
+
+.cart-item__img img {
+	max-width: 100px;
+	height: auto;
+}
+
+.cart-item__desc {
+	padding-top: 15px;
+	padding-left: 15px;
+}
+
+.cart-item__title {
+	font-size: 16px;
+    line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.cart-item__weight {
+    color: #6c757d!important;
+    font-size: 80%;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.cart-item__details {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.cart-item__details .price__currency {
+	font-size: 18px;
+	margin-left: 15px;
+}
+
+.cart-total {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.delivery-cost {
+
+}
+
+.free {
+	color: #0EA107;
+}
+
+.total-price {
+	color: var(--coltrast-color);
+}
+
+.rouble {
+	color: var(--coltrast-color);
+}
+
+.none {
+	display: none;
+}
+
+/* =================== Delivery page ==================== */
+
+.delivery-section {
+    padding: 50px 0;
+}
+
+.delivery-section .section-title {
+    margin-bottom: 2rem;
+}
+
+.order-form {
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 15px 30px -20px rgba(0, 0, 0, .4);
+}
+
+.order-form .form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    gap: 0.25rem;
+}
+
+.order-form .form-field span,
+.order-form legend {
+    font-weight: 500;
+}
+
+.order-form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.order-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* =================== !Delivery page ==================== */
+
+/* =================== Main rules ====================*/
+
+@media only screen and (min-width : 992px) {
+    .header-bottom .navbar .dropdown-menu-end {
+        margin-left: 0;
+        border: 0;
+    }
+
+    .header-bottom .navbar .nav-link {
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .header-bottom .navbar .dropdown-menu {
+        padding-left: 1rem;
+    }
+}
+

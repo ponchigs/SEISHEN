@@ -1,0 +1,73 @@
+[
+  {
+    "id": 1,
+    "title": "Филадельфия ролл",
+    "itemsInBox": "8",
+    "weight": "261 г",
+    "price": "665 ₽",
+    "imgSrc": "philadelphia.jpeg"
+  },
+
+    {
+    "id": 1,
+    "title": "Кариба ролл",
+    "itemsInBox": "8",
+    "weight": "252 г",
+    "price": "570 ₽",
+    "imgSrc": "kariba.jpeg"
+  },
+
+    {
+    "id": 1,
+    "title": "Майами ролл",
+    "itemsInBox": "8",
+    "weight": "275 г",
+    "price": "555 ₽",
+    "imgSrc": "mayami.jpeg"
+  },
+
+    {
+    "id": 1,
+    "title": "Ниагара ролл",
+    "itemsInBox": "8",
+    "weight": "270 г",
+    "price": "540 ₽",
+    "imgSrc": "niagara.jpeg"
+  },
+
+    {
+    "id": 1,
+    "title": "Филадельфия ролл с креветкой",
+    "itemsInBox": "8",
+    "weight": "246 г",
+    "price": "690 ₽",
+    "imgSrc": "philadelphiaWithShrimp.jpeg"
+  },
+
+    {
+    "id": 1,
+    "title": "Авокадо маки-ролл",
+    "itemsInBox": "8",
+    "weight": "156 г",
+    "price": "304 ₽",
+    "imgSrc": "avocado.jpeg"
+  },
+
+    {
+    "id": 1,
+    "title": "Сакура ролл",
+    "itemsInBox": "8",
+    "weight": "271 г",
+    "price": "340 ₽",
+    "imgSrc": "sakura.jpeg"
+  },
+
+    {
+    "id": 1,
+    "title": "Канада ролл",
+    "itemsInBox": "8",
+    "weight": "261 г",
+    "price": "690 ₽",
+    "imgSrc": "kanada.jpeg"
+  }
+]
