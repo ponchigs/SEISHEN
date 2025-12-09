@@ -32,12 +32,12 @@ function recalcCartSummary() {
         totalCount += count;
     });
 
-    // Обновляем сумму во всех .total-price (sidebar + offcanvas)
+// Обновляем сумму во всех .total-price (sidebar + offcanvas)
     document.querySelectorAll('.total-price').forEach(el => {
         el.textContent = total;
     });
 
-    // Показывать/прятать "Корзина пуста"
+// Показывать/прятать "Корзина пуста"
     document.querySelectorAll('[data-cart-empty]').forEach(el => {
         el.style.display = totalCount > 0 ? 'none' : '';
     });
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', recalcCartSummary);
 
 document.addEventListener('click', function (event) {
 
-    // --- Кнопки +/- ---
+// --- Кнопки +/- ---
     const actionBtn = event.target.closest('[data-action]');
     if (actionBtn) {
         const action = actionBtn.dataset.action;
@@ -75,7 +75,7 @@ document.addEventListener('click', function (event) {
         return;
     }
 
-    // --- Кнопка "+ в корзину" ---
+// --- Кнопка "+ в корзину" ---
     const addToCartBtn = event.target.closest('[data-cart]');
     if (addToCartBtn) {
         const card = addToCartBtn.closest('.card');
@@ -85,7 +85,7 @@ document.addEventListener('click', function (event) {
         if (!counterEl) return;
 
         let current = parseInt(counterEl.textContent, 10) || 0;
-        current += 1;          // просто ещё +1
+        current += 1;
         counterEl.textContent = current;
 
         recalcCartSummary();
@@ -105,11 +105,11 @@ document.addEventListener('click', function (event) {
         form.addEventListener('submit', function (event) {
             event.preventDefault();
 
-            // Телефон
+// Телефон
             const phoneInput = form.querySelector('input[type="text"]');
             const phone = phoneInput ? phoneInput.value.trim() : '';
 
-            // Собираем выбранные позиции (только название + количество)
+// Собираем выбранные позиции (только название + количество)
             const cards = document.querySelectorAll('#products-container .card');
             const items = [];
 
@@ -119,19 +119,19 @@ document.addEventListener('click', function (event) {
                 if (!titleEl || !counterEl) return;
 
                 const count = parseInt(counterEl.textContent, 10) || 0;
-                if (count <= 0) return; // пропускаем пустые
+                if (count <= 0) return;
 
                 const title = titleEl.textContent.trim();
                 items.push(`${title}: ${count}`);
             });
 
-            // Строка для отправки
+// Строка для отправки
             const orderText = [
                 `Телефон: ${phone || 'не указан'}`,
                 `Заказ: ${items.length ? items.join(', ') : 'ничего не выбрано'}`
             ].join(' | ');
 
-            // Скрытое поле q
+// Скрытое поле q
             let qInput = form.querySelector('input[name="q"]');
             if (!qInput) {
                 qInput = document.createElement('input');
