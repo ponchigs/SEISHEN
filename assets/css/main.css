@@ -266,9 +266,9 @@ ul.social-icons a:hover {
 
 /* Липкое меню с якорями */
 .page-nav {
-    position: sticky;      /* делаем блок липким */
-    top: 80px;             /* отступ от верха окна до начала якорного меню */
-    z-index: 900;          /* чтобы не пряталось за контентом */
+    position: sticky;    
+    top: 80px;         
+    z-index: 900;      
 
     background-color: #fff;
     margin-bottom: 1.5rem;
